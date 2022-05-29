@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",
     "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
     "expo": "^45.0.4",
     "expo-cli": "^5.4.4",
     "express": "^4.17.1",

@@ -5,15 +5,15 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     unique: true,
-    required: true
+    required: true,
   },
   password: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 });
 
-userSchema.pre('save', function(next) {
+userSchema.pre('save', function (next) {
   const user = this;
   if (!user.isModified('password')) {
     return next();
@@ -34,7 +34,7 @@ userSchema.pre('save', function(next) {
   });
 });
 
-userSchema.methods.comparePassword = function(candidatePassword) {
+userSchema.methods.comparePassword = function (candidatePassword) {
   const user = this;
 
   return new Promise((resolve, reject) => {
